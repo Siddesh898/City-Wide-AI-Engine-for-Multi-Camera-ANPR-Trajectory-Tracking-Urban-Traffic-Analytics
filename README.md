@@ -1,0 +1,2 @@
+# City-Wide-AI-Engine-for-Multi-Camera-ANPR-Trajectory-Tracking-Urban-Traffic-Analytics
+Urban CCTV/ANPR networks currently operate in isolated silos — plates are detected per-camera with no linking across space or time. This blocks two capabilities city authorities need: tracking a specific vehicle's movement across the whole city, and extracting macro traffic trends from existing camera infrastructure.
