@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  db:
+    image: timescale/timescaledb-ha:pg16   # bundles PostGIS + TimescaleDB
+    environment:
+      POSTGRES_DB: anpr
+      POSTGRES_USER: anpr
+      POSTGRES_PASSWORD: anpr
+    ports: ["5432:5432"]
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/01_init.sql
+      - ./sql/seed_cameras.sql:/docker-entrypoint-initdb.d/02_seed.sql
+      - pgdata:/var/lib/postgresql/data
+
+  kafka:
+    image: bitnami/kafka:3.7
+    environment:
+      KAFKA_CFG_NODE_ID: "1"
+      KAFKA_CFG_PROCESS_ROLES: "controller,broker"
+      KAFKA_CFG_LISTENERS: "PLAINTEXT://:9092,CONTROLLER://:9093"
+      KAFKA_CFG_ADVERTISED_LISTENERS: "PLAINTEXT://localhost:9092"
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: "CONTROLLER"
+      ALLOW_PLAINTEXT_LISTENER: "yes"
+    ports: ["9092:9092"]
+
+volumes:
+  pgdata:

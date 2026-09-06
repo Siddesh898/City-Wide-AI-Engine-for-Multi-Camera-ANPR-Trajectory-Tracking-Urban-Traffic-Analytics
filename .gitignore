@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+node_modules/
+dist/
+*.pt
+!yolov8n.pt
+datasets/
+*.mp4
+*.avi
