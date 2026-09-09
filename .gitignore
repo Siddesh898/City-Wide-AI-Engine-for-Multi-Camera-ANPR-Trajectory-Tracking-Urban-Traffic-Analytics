@@ -6,7 +6,7 @@ venv/
 node_modules/
 dist/
 *.pt
-!yolov8n.pt
-datasets/
+datasets/*
+!datasets/*.py
 *.mp4
 *.avi

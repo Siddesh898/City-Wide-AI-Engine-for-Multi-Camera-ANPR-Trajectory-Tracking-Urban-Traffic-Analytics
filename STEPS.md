@@ -109,7 +109,7 @@ When that returns points, the slice works. Now split into feature work.
 ### 4.1 Member 1 — Vehicle detection + tracking
 **File:** `vision/vehicle_tracker.py`
 
-1. `pip install -r requirements.txt` pulls ultralytics; `yolov8n.pt` auto-downloads
+1. `pip install -r requirements.txt` pulls ultralytics; `yolov8s.pt` auto-downloads
    on first run.
 2. Test on any traffic video:
    ```bash

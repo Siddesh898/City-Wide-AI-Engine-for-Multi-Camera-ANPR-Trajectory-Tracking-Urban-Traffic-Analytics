@@ -55,7 +55,7 @@ readable plates — you're testing tracking, not OCR.
 ```bash
 python -m vision.vehicle_tracker datasets/sample.mp4
 ```
-First run auto-downloads `yolov8n.pt` (~6 MB) once. Then lines scroll:
+First run auto-downloads `yolov8s.pt` (~22 MB) once. Then lines scroll:
 ```
 3 car E
 3 car E

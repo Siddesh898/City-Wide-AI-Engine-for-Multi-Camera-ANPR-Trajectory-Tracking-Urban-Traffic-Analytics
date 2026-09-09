@@ -21,7 +21,7 @@ python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt          # pulls ultralytics
 cp .env.example .env && set -a; . ./.env; set +a
 ```
-`yolov8n.pt` auto-downloads on first run — no manual step.
+`yolov8s.pt` auto-downloads on first run — no manual step.
 
 ## Step 1 — run it on a video
 Drop any traffic clip at `datasets/sample.mp4`, then:
